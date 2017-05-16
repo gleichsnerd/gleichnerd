@@ -1,0 +1,261 @@
+@import "variables";
+
+/* Html overrides */
+
+html, 
+body {
+  height: 100%;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: $light-blue;
+  color: $black;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body > .ember-view {
+  @extend .flex-column, .flex-grow;
+}
+
+/* Text stuffs */
+.text- {
+  &left {
+    text-align: left;
+  }
+
+  &center {
+    text-align: center;
+  }
+
+  &right {
+    text-align: right;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+/* Flexbox Classes */
+
+[class*="flex"], .flex {
+  display: flex;
+}
+
+.flex- {
+
+  &row {
+    flex-direction: row;
+  }
+
+  &column {
+    flex-direction: column;
+  }
+
+  &grow {
+    flex-grow: 1;
+    width: 100%;
+    height:100%;
+  }
+
+  &center {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  &end {
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+/* Images */
+
+.image-normal {
+  width: $image-normal;
+  max-width: 250px;
+
+  height: $image-normal;
+  max-height: 250px;
+}
+
+/* Padding & margins */
+
+.padding {
+  &-smallest {
+    padding: $padding-smallest;
+  }
+
+  &-smaller {
+    padding: $padding-smaller;
+  }
+
+  &-small {
+    padding: $padding-small;
+  }
+
+  &-normal {
+    padding: $padding-normal;
+  }
+
+  &-large {
+    padding: $padding-large;
+  }
+
+  &-larger {
+    padding: $padding-larger;
+  }
+
+  &-largest {
+    padding: $padding-largest;
+  }
+}
+
+.margin {
+  &-smallest {
+    margin: $padding-smallest;
+  }
+
+  &-smaller {
+    margin: $padding-smaller;
+  }
+
+  &-small {
+    margin: $padding-small;
+  }
+
+  &-normal {
+    margin: $padding-normal;
+  }
+
+  &-large {
+    margin: $padding-large;
+  }
+
+  &-larger {
+    margin: $padding-larger;
+  }
+
+  &-largest {
+    margin: $padding-largest;
+  }
+}
+
+/* Application Div Wrapper*/
+
+.application {
+  @extend .flex-column, .flex-grow;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* nav bar */
+
+.nav-bar {
+  color: $white;
+  font-weight: 300;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.nav-bar-top {
+  @extend .nav-bar;
+
+  background-color: $dark-blue;
+
+  @media screen and (max-width: 480px) {
+    a {
+      font-size: 10pt;
+      margin-right: $padding-smallest;
+    }
+
+    h3 {
+      font-size: 13px;
+    }
+  }
+
+
+}
+
+/* Home page nametag */
+
+.nametag {
+  height: 30vmin;
+  min-height: 200px;
+  max-height: 250px;
+
+  width: 50vmin;
+  min-width: 360px;
+  max-width: 460px;
+
+  padding-bottom: $padding-largest * 10;
+}
+
+.nametag-top {
+  background-color: $dark-blue;
+  color: $white;
+  height: 30%;
+  border-radius: $border-radius-normal $border-radius-normal 0 0;
+}
+
+.nametag-middle {
+  background-color: $white;
+  font-size: 20pt;
+  height: 50%;
+}
+
+.nametag-underline {
+  border-top: 4px solid $black;
+  width: 80%;
+}
+
+.nametag-bottom {
+  background-color: $dark-blue;
+  color: $white;
+  height: 20%;
+  border-radius: 0 0 $border-radius-normal $border-radius-normal;
+}
+
+/* Under Construction Page */
+.under-construction-text {
+  width: 80vw;
+  max-width: 400px;
+}
+
+
+/* Generic classes */
+.content-accented {
+  border-radius: $border-radius-normal;
+  background-color: $white;
+  padding: $padding-largest;
+  width: 70vw;
+}
+
+.gleichsnerd {
+  font-family: 'Coming Soon', cursive;
+}
