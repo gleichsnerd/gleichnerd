@@ -1,9 +1,15 @@
 <div class="content-accented">
+  <h2>Hi, my name is (actually) Adam Gleichsner.</h2>
+  <br/>
+  <div class="margin-large float-right flex-center flex-column hideable">
+    <img src="/images/me.png" class="image-small"/>
+    <pre>I look something like this</pre>
+  </div>
   <p>
-    Hello! My name is Adam, but you can call me gleichsnerd if you'd like. I'm a Pennsylvania transplant living in Columbus, OH, and have been here for a little over a year now.
+    I'm a Pennsylvania transplant living in Columbus, OH, and have been here for a little over a year now. Before this, I was finishing my undergraduate degree in Computer Science at Case Western Reserve University, located in sunny Cleveland, OH.
   </p>
   <br/>
-  <p>By day, I'm a fullstack software engineer, working on anything and everything, from the front-most portions of webapps all the way back to database optimization, server scripting, and more. By night, I'm still a developer who also writes, camps, and starts weird projects like fixing a typewriter or reassembling an entire bicycle for fun and negative profit.
+  <p>By day, I'm a fullstack software engineer, working on anything and everything, from the front-most portions of webapps all the way back to database optimization, server scripting, and more. By night, I'm still an engineer, but I also write (nonfiction, poetry, and the occasional start of a novel), do outdoorsy things like camping and canoeing, and start weird projects like fixing a typewriter or reassembling an entire bicycle for fun and negative profit margins.
   </p>
   <br/>
   <p>
@@ -11,12 +17,12 @@
   </p>
   <br/>
   <p>
-    I primarily work in EmberJS, Java, and Ruby in my free time, but being a polyglot is in my DNA. Just take a look at some of the languages I've used (and abused) so far:
+    I primarily work in EmberJS, Java, and Ruby in my free time, but being a polyglot is in my DNA; in fact, here's a running list of the languages I've used (and abused) so far:
   </p>
 
-  <ul>
+  <div class="list-auto margin-large">
   {{#each usedLanguagesSorted as |language|}}
-    <li class="margin-smallest">{{language}}</li>
+    <p class="margin-smallest">{{language}}</p>
   {{/each}}
-  </ul>
+  </div>
 </div>

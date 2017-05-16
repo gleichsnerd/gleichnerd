@@ -100,6 +100,22 @@ body > .ember-view {
   max-height: 250px;
 }
 
+.image-small {
+  width: $image-small;
+  max-width: 200px;
+
+  height: $image-small;
+  max-height: 200px;
+}
+
+.image-smaller {
+  width: $image-smaller;
+  max-width: 150px;
+
+  height: $image-smaller;
+  max-height: 150px;
+}
+
 /* Padding & margins */
 
 .padding {
@@ -190,16 +206,17 @@ body > .ember-view {
 
   @media screen and (max-width: 480px) {
     a {
-      font-size: 10pt;
-      margin-right: $padding-smallest;
-    }
-
-    h3 {
-      font-size: 13px;
+      font-size: 10pt;  
     }
   }
 
 
+}
+
+.hideable {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 }
 
 /* Home page nametag */
@@ -258,4 +275,12 @@ body > .ember-view {
 
 .gleichsnerd {
   font-family: 'Coming Soon', cursive;
+}
+
+.float-right {
+  float: right;
+}
+
+.list-auto {
+  column-width: 100px;
 }
