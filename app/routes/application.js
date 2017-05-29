@@ -10,7 +10,13 @@ export default Base.extend({
   setupController() {
     this._super(... arguments);
     let applicationController = this.controllerFor('application');
-    set(applicationController, "showTopNav", false);
+    set(applicationController, "isOnHomePage", true);
+  },
+
+  actions: {
+    gotoHome() {
+      this.transitionTo('index');
+    }
   }
 
 });

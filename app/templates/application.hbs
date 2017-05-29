@@ -1,6 +1,8 @@
 <div class="application">
-  {{#if showTopNav}}
-    {{nav-bar}}
-  {{/if}}
-  {{outlet}}
+  {{#unless isOnHomePage}}
+    {{nav-bar showHome=true gotoHome=(route-action "gotoHome")}}
+  {{/unless}}
+  <div class="scroll-container">
+    {{outlet}}
+  </div>
 </div>

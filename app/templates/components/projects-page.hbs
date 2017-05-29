@@ -1,1 +1,23 @@
-{{under-construction}}
+<h2 class="text-center">Things I'm actively working on</h2>
+<div class="list-auto margin-largest flex-center">
+{{#each activeProjects as |project|}}
+{{project-tile 
+      project=project
+      onSelect=(action "selectProject" project.id)
+    }}
+{{/each}}
+</div>
+
+<h2 class="text-center">Things I've worked on or are on hiatus</h2>
+
+<div class="list-auto margin-largest flex-center">
+  {{#each inactiveProjects as |project|}}
+    {{project-tile 
+      project=project
+      onSelect=(action "selectProject" project.id)
+    }}
+  {{/each}}
+</div>
+
+
+{{yield}}

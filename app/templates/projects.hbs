@@ -1,1 +1,6 @@
-{{projects-page}}
+{{#projects-page 
+  projects=model
+  onSelectProject=(route-action "transitionToProject")
+}}
+{{outlet}}
+{{/projects-page}}

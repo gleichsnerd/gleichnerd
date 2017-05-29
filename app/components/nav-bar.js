@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   
-  classNames: ["flex-row flex-center"],
+  classNames: ["flex-center"],
   
-  classNameBindings: ["isAtTop:nav-bar-top:nav-bar"],
+  classNameBindings: ["showHome:nav-bar-top:nav-bar", "showHome:flex-column:flex-row"],
 
-  isAtTop: true
+  showHome: true
 });
