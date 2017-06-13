@@ -57,7 +57,7 @@ export default Ember.Component.extend({
 
   resume: "Resume",
 
-  contactMe: computed("sisSmallScreen", function() {
+  contactMe: computed("isSmallScreen", function() {
     return get(this, "isSmallScreen") ? "Contact" : "Contact Me";
   }),
 
