@@ -9,7 +9,7 @@ const {
 
 export default Component.extend({
 
-  classNames: ["margin-large", "flex-column", "flex-center"],
+  classNames: ["margin-large", "flex-column"],
 
   usedLanguages: emberA([
     "Bash",

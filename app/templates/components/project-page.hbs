@@ -4,23 +4,47 @@
     translucentOverlay=true
     containerClass="project-page"
   }}
-  <div class="flex-grow flex-column">
-    <div class="flex-grow flex-row">
-      <div class="flex-column padding-largest-right">
-        <img class="image-normal" src={{project.icon}}/>
+  {{#if screen.isSmallScreen}}
+    <div class="flex-grow flex-column">
+      <div class="flex-row padding-large-bottom margin-auto">
+        {{#if (not screen.isShortScreen)}}
+          <img class="image-small" src={{project.icon}}/>
+        {{/if}}
       </div>
-      <div class="scroll-container flex-column">
-      {{#each project.description as |paragraph|}}
-        <p>{{{paragraph}}}</p>
-        <br/>
-      {{/each}}
+      <div class="list-auto padding-large-bottom flex-center flex-wrap">
+        {{#each project.links as |ref|}}
+          <div class="flex-center flex-column padding-small">
+            <i class="fa {{ref.icon}} padding-smallest fa-2x" aria-hidden="true"/>
+            <a href={{ref.link}} class="text-center">{{ref.text}}</a>
+          </div>
+        {{/each}}
+      </div>
+      <div class="scroll-container flex-column project-description">
+        {{#each project.description as |paragraph|}}
+          <p>{{{paragraph}}}</p>
+          <br/>
+        {{/each}}
       </div>
     </div>
-    <div class="flex-grow flex-row flex-center">
-      {{#each project.links as |ref|}}
-        <i class="fa {{ref.icon}} padding-smallest fa-2x" aria-hidden="true"/><a href={{ref.link}} class="padding-largest-right">{{ref.text}}</a>
-      {{/each}}
+  {{else}}
+    <div class="flex-grow flex-column">
+      <div class="flex-grow flex-row padding-normal-bottom">
+        <div class="flex-column padding-largest-right">
+          <img class="image-normal" src={{project.icon}}/>
+        </div>
+        <div class="scroll-container flex-column project-description">
+        {{#each project.description as |paragraph|}}
+          <p>{{{paragraph}}}</p>
+          <br/>
+        {{/each}}
+        </div>
+      </div>
+      <div class="flex-grow flex-row flex-center">
+        {{#each project.links as |ref|}}
+          <i class="fa {{ref.icon}} padding-smallest fa-2x" aria-hidden="true"/><a href={{ref.link}} class="padding-largest-right">{{ref.text}}</a>
+        {{/each}}
+      </div>
     </div>
-  </div>
+  {{/if}}
 
 {{/modal-dialog}}

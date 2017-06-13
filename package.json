@@ -1,6 +1,6 @@
 {
   "name": "gleichsnerd",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "My personal website",
   "license": "MIT",
   "author": "",
@@ -44,5 +44,8 @@
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "ember-screen": "^0.2.0"
+  }
 }

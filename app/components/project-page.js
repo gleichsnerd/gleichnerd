@@ -2,10 +2,13 @@ import Ember from 'ember';
 
 const {
   get,
-  isPresent
+  isPresent,
+  inject
 } = Ember;
 
 export default Ember.Component.extend({
+
+  screen: inject.service("screen"),
 
   actions: {
     closeModal() {

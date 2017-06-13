@@ -1,9 +1,10 @@
 {{#if showHome}}
   {{name-tag logoSize=true showNav=false onClick=gotoHome}}
 {{/if}}
-<div class="flex-grow {{if showHome "flex-column" "flex-row"}} padding-large">
-{{#link-to "about-me" class="padding-smaller"}}About Me{{/link-to}}
-{{#link-to "projects" class="padding-smaller"}}Projects{{/link-to}}
-{{#link-to "resume" class="padding-smaller"}}Resume{{/link-to}}
-{{#link-to "contact-me" class="padding-smaller"}}Contact Me{{/link-to}}
-</div>
+
+  <div class="nav-links flex-grow {{navLinksClasses}}">
+    {{#link-to "about-me" class="padding-smaller"}}{{aboutMe}}{{/link-to}}
+    {{#link-to "projects" class="padding-smaller"}}{{projects}}{{/link-to}}
+    {{#link-to "resume" class="padding-smaller"}}{{resume}}{{/link-to}}
+    {{#link-to "contact-me" class="padding-smaller"}}{{contactMe}}{{/link-to}}
+  </div>

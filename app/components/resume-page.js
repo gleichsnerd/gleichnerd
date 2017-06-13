@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
+const {
+  inject
+} = Ember
+
 export default Ember.Component.extend({
 
-  classNames: ["margin-large", "flex-grow", "flex-column", "flex-center"]
+  screen: inject.service("screen"),
+
+  classNames: ["margin-large", "flex-column"],
 
 });

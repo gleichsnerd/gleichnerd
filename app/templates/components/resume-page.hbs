@@ -1,4 +1,10 @@
-<div class="content-accented flex-column align-items-center">
-  <h2>Download the pdf <a href="https://github.com/gleichsnerd/resume/raw/master/adam_gleichsner_resume.pdf">here</a></h2>
-  <img src="/adam_gleichsner_resume.png" class="pdf padding-largest"/>
+<div class="content-accented margin-auto">
+  {{#if screen.isSmallScreen}}
+    <h2 class="flex-center padding-largest-bottom">Hey!</h2>
+    <h3>Looks like you're on a pretty small screen there. How about you take a look at the pdf <a href="https://drive.google.com/file/d/0Bys3heo7AzI0Qm0zS00yUGVKc1k/view?usp=sharing">here?</a></h3>
+  {{else}}
+    <h2 class="flex-center padding-largest-bottom">Looks like you want to know about my background!</h2>
+    <h3 class="flex-center padding-largest-bottom">Here's a quick peek, but you can download the pdf <a class="padding-smaller-left" href="https://drive.google.com/file/d/0Bys3heo7AzI0Qm0zS00yUGVKc1k/view?usp=sharing">here</a></h3>
+    <img src="/adam_gleichsner_resume.png" class="pdf padding-largest"/>
+  {{/if}}
 </div>

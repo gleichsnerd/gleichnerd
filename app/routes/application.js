@@ -2,7 +2,8 @@ import Ember from 'ember';
 import Base from './base';
 
 const {
-  set
+  set,
+  $: ember$
 } = Ember;
 
 export default Base.extend({
@@ -11,6 +12,7 @@ export default Base.extend({
     this._super(... arguments);
     let applicationController = this.controllerFor('application');
     set(applicationController, "isOnHomePage", true);
+    ember$('body').addClass('blue-background');
   },
 
   actions: {
